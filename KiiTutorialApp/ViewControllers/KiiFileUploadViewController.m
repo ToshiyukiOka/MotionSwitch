@@ -105,6 +105,7 @@
 
                        NSError *error = nil;
                        self.selectedImagePath = [NSTemporaryDirectory() stringByAppendingPathComponent:fileName];
+                       NSLog(self.selectedImagePath);
                        [data writeToFile:self.selectedImagePath options:NSDataWritingAtomic error:&error];
                        if (error != nil) {
                            self.selectedImage = nil;
@@ -140,7 +141,6 @@
     MBProgressHUD *hud = [KiiViewUtilities showProgressHUD:@"Uploading..."
                                                   withMode:MBProgressHUDModeAnnularDeterminate
                                                    andView:self.view];
-
     KiiUploader *uploader = [self.kiiObject uploader:self.selectedImagePath];
 
     // Create a progress block.

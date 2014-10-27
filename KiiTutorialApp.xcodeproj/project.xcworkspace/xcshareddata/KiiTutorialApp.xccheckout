@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3B4783E2-AE6B-4296-B014-1AD2F0D2E84A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>KiiTutorialApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5A3CE46C34C01FF6051495F29BED4EB2543D4679</key>
+		<string>github-motion-switch:ToshiyukiOka/MotionSwitch.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>KiiTutorialApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5A3CE46C34C01FF6051495F29BED4EB2543D4679</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github-motion-switch:ToshiyukiOka/MotionSwitch.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5A3CE46C34C01FF6051495F29BED4EB2543D4679</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5A3CE46C34C01FF6051495F29BED4EB2543D4679</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MotionSwitch</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -26,6 +26,8 @@ uint8_t pin_servo[128]   = {0};
 
 uint8_t init_done = 0;
 
+Boolean *count_status = false;
+
 @interface RBLControlViewController ()
 
 @end
@@ -260,12 +262,26 @@ NSTimer *syncTimer;
         [cell.sldPWM setHidden:TRUE];
     }
     else if (pin_mode[pin] == ANALOG)
-    {
+    {   //ここがセンサーの値をリアルタイムに表示している場所
         [cell.btnMode setTitle:@"Analog" forState:UIControlStateNormal];
         [cell.lblAnalog setText:[NSString stringWithFormat:@"%d", pin_analog[pin]]];
         [cell.lblAnalog setHidden:FALSE];
         [cell.sgmHL setHidden:TRUE];
         [cell.sldPWM setHidden:TRUE];
+        if (pin_analog[pin] > 10) {
+            if (count_status == false)
+            {
+                NSLog(@"%d", pin_analog[pin]);
+                count_status = true;
+            }
+        }
+        else
+        {
+            if (count_status == true)
+            {
+                count_status = false;
+            }
+        }
     }
     else if (pin_mode[pin] == PWM)
     {
@@ -277,17 +293,6 @@ NSTimer *syncTimer;
         [cell.sldPWM setMinimumValue:0];
         [cell.sldPWM setMaximumValue:255];
         [cell.sldPWM setValue:pin_pwm[pin]];
-    }
-    else if (pin_mode[pin] == SERVO)
-    {
-        [cell.btnMode setTitle:@"Servo" forState:UIControlStateNormal];
-        [cell.lblAnalog setText:[NSString stringWithFormat:@"%d", pin_analog[pin]]];
-        [cell.sldPWM setHidden:FALSE];
-        [cell.lblAnalog setHidden:TRUE];
-        [cell.sgmHL setHidden:TRUE];
-        [cell.sldPWM setMinimumValue:0];
-        [cell.sldPWM setMaximumValue:180];
-        [cell.sldPWM setValue:pin_servo[pin]];
     }
     
     return cell;

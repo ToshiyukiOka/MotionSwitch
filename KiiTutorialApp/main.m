@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 #import "KiiAppDelegate.h"
-#import "RBLAppDelegate.h"
 
 int main(int argc, char * argv[])
 {

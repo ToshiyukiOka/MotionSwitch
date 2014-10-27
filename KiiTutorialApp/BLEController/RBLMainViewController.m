@@ -128,12 +128,14 @@ RBLControlViewController *cv;
                 CBPeripheral *p = [ble.peripherals objectAtIndex:i];
                         
                 if (p.UUID != NULL)
+                    
                 {
                     //Comparing UUIDs and call connectPeripheral is matched
                     if([self.lastUUID isEqualToString:[self getUUIDString:p.UUID]])
                     {
                         showAlert = NO;
                         [ble connectPeripheral:p];
+                        [self performSegueWithIdentifier:@"showDevice" sender:self];    
                     }
                 }
             }
